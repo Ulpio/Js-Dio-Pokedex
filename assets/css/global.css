@@ -1,25 +1,22 @@
 *{
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
-.content{
-    padding: 1rem;
-}
-.content h1{
-    margin: 0;
-}
-
-ol.pokemon{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    list-style: none;
+body{
     margin: 0;
     padding: 0;
+    background-color: #91919125;
 }
-ol.pokemon li{
-    margin: .5rem;
+.content{
+    width: 100vw;
     padding: 1rem;
-    background-color: #14a06f;
-    color: aliceblue;
-    border-radius: 1rem;
-    height: 115px;
+    background-color: white;
+    height: 100vh;
+}
+@media screen and (min-width: 992px){
+    .content{
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;   
+    }
 }
