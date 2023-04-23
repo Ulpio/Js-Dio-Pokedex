@@ -21,11 +21,29 @@
     <!-- Body -->
 <body>
     <section class="content">
-        <h1>PokéDex</h1>
+        <header>
+            <h1>PokéDex</h1>
+        </header>
+        <div class ="generations">
+            <button id="loadGen1" type="button"> Gen 1</button>
+            <button id="loadGen2" type="button"> Gen 2</button>
+            <button id="loadGen3" type="button"> Gen 3</button>
+            <button id="loadGen4" type="button"> Gen 4</button>
+            <button id="loadGen5" type="button"> Gen 5</button>
+            <button id="loadGen6" type="button"> Gen 6</button>
+            <button id="loadGen7" type="button"> Gen 7</button>
+            <button id="loadGen8" type="button"> Gen 8</button>
+            <button id="loadGen9" type="button"> Gen 9</button>
+            <button id="loadAll" type="button">All</button>
+        </div>
         <ol id="pokemonList" class="pokemons">
             <!-- Pokemons Here -->
         </ol>
+        <div class="pagination">
+            <button id="loadMoreButton" type="button">More</button>
+        </div>
     </section>
+    <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/global.js"></script>
 </body>
