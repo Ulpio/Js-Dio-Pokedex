@@ -7,13 +7,13 @@ function convertPokemonTypeToLi(pokemonTypes){
 function convertToList(pokemon) {
     return `
     <li class="pokemon">
-                <span class="number">#${pokemon.order}</span>
+                <span class="number">#${pokemon.id}</span>
                 <span class="name">${(pokemon.name).toUpperCase()}</span>
                 <div class="detail">
                     <ol class="types">
                         ${convertPokemonTypeToLi(pokemon.types).join('')}
                     </ol>
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.order}.png" alt=${pokemon.name}>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt=${pokemon.name}>
                 </div>
             </li>`
 }
