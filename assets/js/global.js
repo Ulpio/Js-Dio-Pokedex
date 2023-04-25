@@ -1,5 +1,4 @@
 const PokemonList = document.getElementById('pokemonList')
-const loadMoreButton = document.getElementById('loadMoreButton')
 const loadGen1 = document.getElementById('loadGen1')
 const loadGen2 = document.getElementById('loadGen2')
 const loadGen3 = document.getElementById('loadGen3')
@@ -10,7 +9,8 @@ const loadGen7 = document.getElementById('loadGen7')
 const loadGen8 = document.getElementById('loadGen8')
 const loadGen9 = document.getElementById('loadGen9')
 const loadAll = document.getElementById('loadAll')
-const limit = 20
+const searchBar = document.getElementById('searchBar')
+const limit = 151
 let offset = 0
 function loadPokemonItens(offset,limit){
     pokeApi.getPokemons(offset,limit).then((pokemons) => {
@@ -33,14 +33,7 @@ function loadPokemonItens(offset,limit){
     })
 
 }
-
 loadPokemonItens(offset,limit)
-
-loadMoreButton.addEventListener('click', () => {
-    offset += limit
-    loadPokemonItens(offset,limit)
-})
-
 loadGen1.addEventListener('click', () => {
     offset = 0
     PokemonList.innerHTML = ''
@@ -90,4 +83,15 @@ loadAll.addEventListener('click', () => {
     offset = 0
     PokemonList.innerHTML = ''
     loadPokemonItens(offset,898)
+})
+searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase()
+    const filteredPokemons = document.querySelectorAll('.pokemon')
+    filteredPokemons.forEach((pokemon) => {
+        if(pokemon.querySelector('.name').textContent.toLowerCase().includes(searchString) || pokemon.querySelector('.type').textContent.toLowerCase().includes(searchString)){
+            pokemon.style.display = 'block'
+        } else {
+            pokemon.style.display = 'none'
+        }
+    })
 })
