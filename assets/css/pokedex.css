@@ -78,6 +78,7 @@
     background-color: #EE99AC;
 }
 
+
 .pokemon{
     display: flex;
     flex-direction: column;
@@ -177,20 +178,78 @@
     background-color: #5b68c9;
     cursor: pointer;
 }
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    padding: .5rem;
+}
+.filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    padding: .5rem;
+}
+.search input{
+    border-radius: 1rem;
+    padding: .5rem;
+    margin: .5rem;
+}
+.search button{
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    height: auto;
+    width: auto;
+    padding: .5rem;
+    margin: .5rem;
+}
+
 @media screen and (max-width: 360px) {
     .pokemons{
         grid-template-columns: 1fr;
     }
-    
+    .generations{
+        flex-direction: column;
+    }
+    .search{
+        flex-direction: column;
+    }
+    .filter{
+        flex-direction: column;
+    }
 }
 @media screen and (min-width: 576px){
     .pokemons{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    .generations{
+        flex-direction: row;
+    }
+    .search{
+        flex-direction: row;
+    }
+    .filter{
+        flex-direction: row;
     }
 }
 @media screen and (min-width: 768px){
     .pokemons{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         background-color: azure;
+    }
+    .generations{
+        flex-direction: row;
+    }
+    .search{
+        flex-direction: row;
+    }
+    .filter{
+        flex-direction: row;
     }
 }
