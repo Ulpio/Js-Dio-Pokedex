@@ -86,12 +86,17 @@
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: 0 0 1rem rgba(0,0,0,.3);
+    text-align: center;
 }
 
 .pokemon .number{
     color: white;
     text-align: right;
     font-size: .8rem;
+    margin: 0;
+    padding: 0;
+    margin-bottom: .25rem;
+    text-transform: capitalize;
 }
 .pokemon .name{
     margin: .25;
@@ -102,12 +107,14 @@
     margin-bottom: 0;
     color: aliceblue ;
     text-transform: capitalize;
+
 }
 .pokemon .detail{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
 }
 .pokemon .detail .types{
     padding: 0;
@@ -123,6 +130,7 @@
     font-size: .75rem;
     font-weight: bold;
     filter: brightness(1.1);
+    align-self: auto;
 }
 
 .pokemon .detail img{
