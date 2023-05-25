@@ -221,6 +221,8 @@
 @media screen and (max-width: 360px) {
     .pokemons{
         grid-template-columns: 1fr;
+        background-color: azure;
+        border-radius: 10px;
     }
     .generations{
         flex-direction: column;

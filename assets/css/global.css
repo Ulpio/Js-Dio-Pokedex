@@ -21,6 +21,51 @@ body{
     height: 100vh;
     border-radius: 10px;
     margin: 1rem auto;
+
+}
+@media screen and (max-width: 576px){
+    body{
+        background-image: url(peakpx.jpg);
+        background-color: aquamarine;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+    .content{
+        max-width: 576px;
+        height: auto;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    .generations{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+    
+@media screen and (min-width: 390px){
+    body{
+        background-image: url(peakpx.jpg);
+        background-color: aquamarine;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+    .content{
+        max-width: 390px;
+        height: auto;
+        margin: 1rem auto;
+        padding: 1rem;
+
+    }
+    
 }
 @media screen and (min-width: 992px){
     body{
@@ -35,6 +80,27 @@ body{
     .content{
         max-width: 992px;
         height: auto;
-        margin: 1rem auto;   
+        margin: 1rem auto;
+        padding: 1rem;
+
+    }
+}
+
+@media screen and (min-width: 1200px){
+    body{
+        background-image: url(peakpx.jpg);
+        background-color: aquamarine;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+    .content{
+        max-width: 1200px;
+        height: auto;
+        margin: 1rem auto;
+        padding: 1rem;
+
     }
 }

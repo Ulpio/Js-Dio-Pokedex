@@ -88,7 +88,8 @@ searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase()
     const filteredPokemons = document.querySelectorAll('.pokemon')
     filteredPokemons.forEach((pokemon) => {
-        if(pokemon.querySelector('.name').textContent.toLowerCase().includes(searchString) || pokemon.querySelector('.types').textContent.toLowerCase().includes(searchString)){
+        if(pokemon.querySelector('.name').textContent.toLowerCase().includes(searchString) ||
+        pokemon.querySelector('.types').textContent.toLowerCase().includes(searchString)){
             pokemon.style.display = 'block'
         } else {
             pokemon.style.display = 'none'
