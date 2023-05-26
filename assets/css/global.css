@@ -17,11 +17,16 @@ body{
 .content{
     width: 100vw;
     padding: 1rem;
-    background-color: white;
+    background-color: rgba(255, 255, 255);
     height: 100vh;
     border-radius: 10px;
     margin: 1rem auto;
-
+}
+.content title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #6c79db;
 }
 @media screen and (max-width: 576px){
     body{
@@ -39,16 +44,13 @@ body{
         margin: 1rem auto;
         padding: 1rem;
     }
-    .generations{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .pokemons{
+        grid-template-columns: 1fr;
+        background-color: white;
+        border-radius: 10px;
     }
 }
-
-    
-@media screen and (min-width: 390px){
+@media screen and (max-width: 390px){
     body{
         background-image: url(peakpx.jpg);
         background-color: aquamarine;
@@ -102,5 +104,11 @@ body{
         margin: 1rem auto;
         padding: 1rem;
 
+    }
+    .content title{
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #6c79db;
     }
 }

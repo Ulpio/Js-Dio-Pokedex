@@ -221,7 +221,7 @@
 @media screen and (max-width: 360px) {
     .pokemons{
         grid-template-columns: 1fr;
-        background-color: azure;
+        background-color: white;
         border-radius: 10px;
     }
     .generations{
@@ -235,8 +235,13 @@
     }
 }
 @media screen and (min-width: 576px){
+    .content{
+        padding: 1rem;
+
+    }
     .pokemons{
         grid-template-columns: 1fr 1fr 1fr;
+        background-color: white;
     }
     .generations{
         flex-direction: row;
@@ -250,8 +255,8 @@
 }
 @media screen and (min-width: 768px){
     .pokemons{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        background-color: azure;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        background-color: white;
     }
     .generations{
         flex-direction: row;
