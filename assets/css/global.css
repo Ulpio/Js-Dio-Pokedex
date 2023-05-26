@@ -3,6 +3,9 @@
     box-sizing: border-box;
 
 }
+h1{
+    text-align: center;
+}
 body{
     margin: 0;
     padding: 0;
@@ -17,10 +20,12 @@ body{
 .content{
     width: 100vw;
     padding: 1rem;
+    margin: auto;
     background-color: white;
-    height: 100vh;
+    height: 20%;
     border-radius: 10px;
     margin: 1rem auto;
+    
 }
 @media screen and (min-width: 992px){
     body{
