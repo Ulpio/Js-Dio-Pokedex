@@ -9,6 +9,7 @@ const loadGen7 = document.getElementById('loadGen7')
 const loadGen8 = document.getElementById('loadGen8')
 const loadGen9 = document.getElementById('loadGen9')
 const loadAll = document.getElementById('loadAll')
+const loadNextGen = document.getElementById('loadNextGen')
 const searchBar = document.getElementById('searchBar')
 const limit = 151
 let offset = 0
@@ -29,60 +30,74 @@ function loadPokemonItens(offset,limit){
             ).join('')
 
         PokemonList.innerHTML += newHtml
-
     })
-
 }
 loadPokemonItens(offset,limit)
 loadGen1.addEventListener('click', () => {
+    actualGen = 1
     offset = 0
     PokemonList.innerHTML = ''
     loadPokemonItens(offset,151)
 })
 loadGen2.addEventListener('click', () => {
+    actualGen = 2
     offset = 151
     PokemonList.innerHTML = ''
     loadPokemonItens(offset,100)
 })
 loadGen3.addEventListener('click', () => {
+    actualGen = 3
     offset = 251
     PokemonList.innerHTML = ''
     loadPokemonItens(offset,135)
 })
 loadGen4.addEventListener('click', () => {
+    actualGen = 4
     offset = 386
     PokemonList.innerHTML = ''
     loadPokemonItens(offset,107)
 })
 loadGen5.addEventListener('click', () => {
+    actualGen = 5
     offset = 493
     PokemonList.innerHTML = ''
     loadPokemonItens(offset,156)
 })
 loadGen6.addEventListener('click', () => {
+    actualGen = 6
     offset = 649
     PokemonList.innerHTML = ''
     loadPokemonItens(offset,72)
 })
 loadGen7.addEventListener('click', () => {
+    actualGen = 7
     offset = 721
     PokemonList.innerHTML = ''
     loadPokemonItens(offset,88)
 })
 loadGen8.addEventListener('click', () => {
+    actualGen = 8
     offset = 809
     PokemonList.innerHTML = ''
     loadPokemonItens(offset,89)
 })
 loadGen9.addEventListener('click', () => {
+    actualGen = 9
     offset = 905
     PokemonList.innerHTML = ''
     loadPokemonItens(offset,105)
 })
 loadAll.addEventListener('click', () => {
+    actualGen = all
     offset = 0
     PokemonList.innerHTML = ''
     loadPokemonItens(offset,898)
+})
+loadNextGen.addEventListener('click', () => {
+    offset += limit
+    PokemonList.innerHTML = ''
+    loadPokemonItens(offset,limit)
+    
 })
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase()
